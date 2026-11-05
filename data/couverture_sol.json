@@ -1,0 +1,89 @@
+{
+ "bounds": [
+  [
+   6.111111111104407,
+   -0.1472222222078301
+  ],
+  [
+   11.138888888882576,
+   1.8055555555700946
+  ]
+ ],
+ "legend": [
+  {
+   "label": "Cultures pluviales",
+   "color": "#ffff64",
+   "pct": 31.5
+  },
+  {
+   "label": "Cultures irriguées",
+   "color": "#aaf0f0",
+   "pct": 0.2
+  },
+  {
+   "label": "Mosaïque à dominante cultures",
+   "color": "#dcf064",
+   "pct": 11.9
+  },
+  {
+   "label": "Mosaïque à dominante végétation naturelle",
+   "color": "#c8c864",
+   "pct": 6.2
+  },
+  {
+   "label": "Forêt dense sempervirente",
+   "color": "#006400",
+   "pct": 1.1
+  },
+  {
+   "label": "Forêt décidue",
+   "color": "#00a000",
+   "pct": 0.8
+  },
+  {
+   "label": "Forêt décidue claire",
+   "color": "#aac800",
+   "pct": 35.4
+  },
+  {
+   "label": "Mosaïque arbres et herbacées",
+   "color": "#8ca000",
+   "pct": 0.1
+  },
+  {
+   "label": "Arbustes",
+   "color": "#966400",
+   "pct": 11.9
+  },
+  {
+   "label": "Prairies",
+   "color": "#ffb432",
+   "pct": 0.0
+  },
+  {
+   "label": "Végétation clairsemée",
+   "color": "#ffebaf",
+   "pct": 0.0
+  },
+  {
+   "label": "Végétation inondée",
+   "color": "#00dc82",
+   "pct": 0.0
+  },
+  {
+   "label": "Zones urbaines",
+   "color": "#c31400",
+   "pct": 0.5
+  },
+  {
+   "label": "Sols nus",
+   "color": "#fff5d7",
+   "pct": 0.0
+  },
+  {
+   "label": "Eau",
+   "color": "#0046c8",
+   "pct": 0.4
+  }
+ ]
+}

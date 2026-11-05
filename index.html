@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebGIS Togo | Elvis N'LEDEA</title>
+    <meta
+      name="description"
+      content="Carte interactive du Togo : écoles, hôpitaux, routes, préfectures et couverture du sol. Projet WebGIS sous Leaflet réalisé par Elvis N'LEDEA, géomaticien."
+    />
+
+    <!-- Bibliothèques incluses localement : la carte reste fonctionnelle sans CDN -->
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="lib/markercluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="lib/markercluster/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="lib/geosearch/geosearch.css" />
+    <link rel="stylesheet" href="lib/locate/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="lib/fullscreen/Control.FullScreen.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Bandeau de titre -->
+    <header class="titre">
+      <h1>WebGIS Togo</h1>
+      <p>Écoles, santé, routes et occupation du sol</p>
+      <button id="btn-infos" type="button" aria-expanded="false" aria-controls="infos">
+        À propos et sources
+      </button>
+      <div id="infos" hidden>
+        <p>
+          Réalisation : <strong>Elvis N'LEDEA</strong>, géomaticien.<br />
+          Projet de l'unité « Intégration et publication des données géospatiales »,
+          LTAG, Université de Lomé, décembre 2025.
+        </p>
+        <p><strong>Sources des données</strong></p>
+        <ul>
+          <li>Écoles et hôpitaux : OpenStreetMap</li>
+          <li>Préfectures : limites GADM (ancien découpage en 21 préfectures)</li>
+          <li>Population par région : INSEED, RGPH-5 (2022)</li>
+          <li>Routes : jeu de données fourni par le LTAG</li>
+          <li>Couverture du sol : ESA Climate Change Initiative Land Cover, résolution d'environ 300 m</li>
+        </ul>
+        <p>Outils : Leaflet, QGIS, GeoServer (version d'origine), Python.</p>
+      </div>
+    </header>
+
+    <!-- Conteneur de la carte -->
+    <main id="map" aria-label="Carte interactive du Togo"></main>
+
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="lib/markercluster/leaflet.markercluster.js"></script>
+    <script src="lib/geosearch/bundle.min.js"></script>
+    <script src="lib/locate/L.Control.Locate.min.js"></script>
+    <script src="lib/fullscreen/Control.FullScreen.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

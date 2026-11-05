@@ -1,0 +1,140 @@
+/* =========================================================================
+   WebGIS Togo : styles
+   ========================================================================= */
+:root {
+  --encre: #1f2a37;
+  --encre-douce: #5b6675;
+  --fond-panneau: rgba(255, 255, 255, 0.96);
+  --accent: #1f7a4d;
+  --ombre: 0 2px 12px rgba(0, 0, 0, 0.18);
+  --rayon: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--encre);
+  background: #e8ecef;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+}
+
+/* Bandeau de titre, au-dessus de la carte */
+.titre {
+  position: absolute;
+  z-index: 1000;
+  top: 12px;
+  left: 58px;
+  max-width: min(360px, calc(100vw - 120px));
+  padding: 10px 14px;
+  background: var(--fond-panneau);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+}
+.titre h1 { margin: 0; font-size: 18px; letter-spacing: 0.2px; }
+.titre p { margin: 2px 0 6px; font-size: 13px; color: var(--encre-douce); }
+#btn-infos {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#infos { margin-top: 8px; font-size: 12.5px; line-height: 1.45; }
+#infos ul { margin: 4px 0 8px; padding-left: 18px; }
+#infos p { color: var(--encre); margin: 6px 0; }
+
+/* Raster de couverture du sol : pixels nets, sans flou */
+.raster-pixels { image-rendering: pixelated; }
+
+/* Popups */
+.leaflet-popup-content { font-size: 13px; line-height: 1.5; }
+.leaflet-popup-content h3 { margin: 0 0 4px; font-size: 14px; }
+
+/* Groupes de points (clustering) */
+.groupe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.groupe-ecole { background: #2b6cb0; }
+.groupe-hopital { background: #c53030; }
+
+/* Coordonnées de la souris */
+.coords {
+  padding: 3px 8px;
+  background: var(--fond-panneau);
+  border-radius: 6px;
+  font: 12px/1.4 Consolas, monospace;
+  box-shadow: var(--ombre);
+}
+
+/* Légende repliable */
+.legende {
+  background: var(--fond-panneau);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  font-size: 12.5px;
+  max-width: 270px;
+}
+.legende .entete {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: 0;
+  background: none;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--encre);
+  cursor: pointer;
+}
+.legende .entete::before { content: "▸ "; color: var(--accent); }
+.legende.ouverte .entete::before { content: "▾ "; }
+.legende .contenu {
+  display: none;
+  padding: 0 12px 10px;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+.legende.ouverte .contenu { display: block; }
+.legende h4 {
+  margin: 8px 0 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--encre-douce);
+}
+.legende .ligne { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.legende img { width: 16px; height: 16px; }
+.legende .carre { width: 16px; height: 12px; flex: none; border: 1px solid rgba(0, 0, 0, 0.25); }
+.legende .trait { width: 26px; height: 0; flex: none; }
+.legende .rond {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  background: linear-gradient(90deg, #c53030 50%, #2b6cb0 50%);
+}
+.legende small { color: var(--encre-douce); }
+
+/* Téléphone */
+@media (max-width: 600px) {
+  .titre { left: 54px; top: 10px; padding: 8px 10px; }
+  .titre h1 { font-size: 16px; }
+  .legende { max-width: 220px; }
+  .coords { display: none; }
+}
